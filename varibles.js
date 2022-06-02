@@ -23,3 +23,9 @@ const welcome = [
 "welcome to my web terminal.\n",
 "for a list of available commands, type '<span class=\"greenGlowText\">help</span>'\n",
 ]
+
+const help = [
+'</br>',
+'<span class="greenGlowText">Clear</span>       Clears the terminal\n',
+'<span class="greenGlowText">whois</span>       who is kailash\n',
+]
