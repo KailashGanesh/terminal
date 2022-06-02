@@ -16,13 +16,24 @@ function runCommand(e){
 
         switch(textArea.value){
             case "help":
-                display(help,textArea.value)
-                console.log("case help")
+                display(textArea.value)
+                printLineByLine(help,terminalHistory);
             break;
             case "clear":
                 textArea.value = "";
                 terminalHistory.innerHTML = '';
             break;
+            case "banner":
+                display(textArea.value)
+                printLineByLine(banner,terminalHistory,"blueGlowText")
+            break;
+            case "whois":
+                display(textArea.value)
+                printLineByLine(whois,terminalHistory)
+            break;
+            default:
+                display(textArea.value,glow=false)
+                printLineByLine(notFound,terminalHistory)
         }
     }
 }
@@ -41,12 +52,12 @@ function printLineByLine(list,element,className,changeSpaces){
 }
 
 function printBanner(){
-    printLineByLine(dice,terminalHistory,"blueGlowText",changeSpaces=true)
-    printLineByLine(banner,terminalHistory,"blueGlowText",changeSpaces=true)
+    // printLineByLine(dice,terminalHistory,"blueGlowText",changeSpaces=true)
+    printLineByLine(banner,terminalHistory,"blueGlowText")
     printLineByLine(welcome,terminalHistory,changeSpaces=false)
 }
 
-function display(command,textAreaValue){
+function display(textAreaValue,glow=true){
     textArea.value = ""
     let currentLine = document.createElement('div');
     let prompt = document.createElement('div');
@@ -54,7 +65,11 @@ function display(command,textAreaValue){
 
     currentLine.className = "current-line"
     prompt.className = "prompt"
-    text.className = "command greenGlowText"
+    text.className = "command"
+
+    if(glow){
+        text.className +=" greenGlowText"
+    }
 
     prompt.innerHTML = "Guest@Portfolio:-$"
     text.innerHTML = textAreaValue;
@@ -63,7 +78,6 @@ function display(command,textAreaValue){
     currentLine.appendChild(text);
     terminalHistory.appendChild(currentLine)
 
-    printLineByLine(command,terminalHistory,changeSpaces=false);
 }
 
 printBanner();

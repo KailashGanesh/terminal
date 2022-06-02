@@ -65,3 +65,7 @@ body{
     color: var(--cyan);
     text-shadow: var(--cyan) 0px 0px 15px;
 }
+
+.redText{
+    color: var(--red);
+}
