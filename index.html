@@ -10,10 +10,13 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-   <div class="terminal" id="terminal_history"></div> 
-   <div class="command" >
-       <p id="command"></p>
-       <!-- <textarea type="text" id="textarea" autofocus> </textarea> -->
+   <div class="terminalHistory" id="terminalHistory"> </div> 
+   <div class="command-area">
+       <div class="current-line">
+        <div class="prompt" id="prompt">Guest@Portfolio:-$</div>
+        <input type="text" class="command" id="textarea" autofocus> </textarea>
+        <!-- <p class="command" id="command"></p> -->
+       </div>
    </div>
 
 </body>

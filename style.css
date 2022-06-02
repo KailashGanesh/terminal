@@ -12,3 +12,53 @@
     --red:#ff5555;
     --yellow:#f1fa8c;
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: cursor, monospace;
+    overflow-x: hidden;
+}
+
+.current-line{
+    color: var(--foreground-color);
+    display: flex;
+    align-items: center;
+}
+
+.command{
+    /* color:#ff5555; */
+    margin-left: 10px;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: cursor, monospace;
+    font-size: medium;
+    border: 0;
+    resize: vertical;
+    white-space: nowarp;
+    width:80%;
+}
+
+.command:focus{
+    outline: none;
+}
+
+.terminalHistory{
+    margin-bottom: 10px;
+}
+
+.greenGlowText{
+    color: var(--green); 
+    text-shadow: var(--green) 0px 0px 5px;
+}
+
+.blueGlowText{
+    color: var(--cyan);
+    text-shadow: var(--cyan) 0px 0px 5px;
+}
