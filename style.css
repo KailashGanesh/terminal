@@ -66,6 +66,10 @@ body{
     text-shadow: var(--cyan) 0px 0px 15px;
 }
 
+.purpleGlowText{
+    color: var(--purple);
+    text-shadow: var(--purple) 0px 0px 15px;
+}
 .redText{
     color: var(--red);
 }

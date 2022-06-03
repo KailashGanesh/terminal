@@ -23,9 +23,16 @@ const welcome = [
 
 const help = [
 '</br>',
-'<span class="greenGlowText">clear</span>       Clears the terminal\n',
-'<span class="greenGlowText">whois</span>       who is kailash\n',
-'<span class="greenGlowText">banner</span>      prints the banner art\n',
+'<span class="greenGlowText">help</span>           You already know what that does\n',
+'<span class="greenGlowText">clear</span>          Clears the terminal\n',
+'<span class="greenGlowText">whois</span>          Who is kailash\n',
+'<span class="greenGlowText">banner</span>         Prints the banner art\n',
+'<span class="greenGlowText">socials</span>        lists my social links\n',
+'<span class="greenGlowText">projects</span>       lists my projects\n',
+'<span class="greenGlowText">why?</span>           why did I make this page?\n',
+'<span class="greenGlowText">email</span>          don\'t spam me\n',
+'<span class="greenGlowText">secret</span>         utters the most guraded secrect in the universe\n',
+'<span class="greenGlowText">dark-joke</span>      fetches a dark joke from an api\n',
 ]
 
 const whois = [

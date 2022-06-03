@@ -1,6 +1,7 @@
 const terminalHistory = document.getElementById("terminalHistory");
 const textArea = document.getElementById("textarea");
 const command = document.getElementById("command");
+const apiUrl = "https://v2.jokeapi.dev/joke/Dark?type=single"
 
 // console.log(textarea.text)
 
@@ -23,13 +24,36 @@ function runCommand(e){
                 textArea.value = "";
                 terminalHistory.innerHTML = '';
             break;
+            case "whois":
+                display(textArea.value)
+                printLineByLine(whois,terminalHistory)
+            break;
             case "banner":
                 display(textArea.value)
                 printLineByLine(banner,terminalHistory,"blueGlowText")
             break;
-            case "whois":
+            case "socials":
                 display(textArea.value)
                 printLineByLine(whois,terminalHistory)
+            break;
+            case "projects":
+                display(textArea.value)
+                printLineByLine(whois,terminalHistory)
+            break;
+            case "why?":
+                display(textArea.value)
+                printLineByLine(["</br>","<span class='purpleGlowText'>because why not?</span>"],terminalHistory)
+            break;
+            case "email":
+                display(textArea.value)
+                printLineByLine(whois,terminalHistory)
+            break;
+            case "secret":
+                display(textArea.value)
+                printLineByLine(whois,terminalHistory)
+            break;
+            case "dark-joke":
+                getJoke(textArea.value)
             break;
             default:
                 display(textArea.value,glow=false)
@@ -78,6 +102,17 @@ function display(textAreaValue,glow=true){
     currentLine.appendChild(text);
     terminalHistory.appendChild(currentLine)
 
+}
+
+async function getJoke(textAreaValue){
+    // making api call request
+    const response = await fetch(apiUrl);
+
+    // parsing it to JSON
+    const data = await response.json();
+    console.log(data.joke)
+    display(textAreaValue)
+    printLineByLine(["</br>",data.joke],terminalHistory)
 }
 
 printBanner();
