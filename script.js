@@ -34,11 +34,11 @@ function runCommand(e){
             break;
             case "socials":
                 display(textArea.value)
-                printLineByLine(whois,terminalHistory)
+                printLineByLine(socials,terminalHistory)
             break;
             case "projects":
                 display(textArea.value)
-                printLineByLine(whois,terminalHistory)
+                printLineByLine(projects,terminalHistory)
             break;
             case "why?":
                 display(textArea.value)
@@ -46,7 +46,7 @@ function runCommand(e){
             break;
             case "email":
                 display(textArea.value)
-                printLineByLine(whois,terminalHistory)
+                printLineByLine(email,terminalHistory)
             break;
             case "secret":
                 display(textArea.value)
@@ -71,8 +71,9 @@ function printLineByLine(list,element,className,changeSpaces){
         // }
         para.className = className;
         para.innerHTML += newText;
-        element.append(para)
+        element.append(para);
     }
+    textArea.scrollIntoView();
 }
 
 function printBanner(){

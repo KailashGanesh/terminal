@@ -27,18 +27,35 @@ const help = [
 '<span class="greenGlowText">clear</span>          Clears the terminal\n',
 '<span class="greenGlowText">whois</span>          Who is kailash\n',
 '<span class="greenGlowText">banner</span>         Prints the banner art\n',
-'<span class="greenGlowText">socials</span>        lists my social links\n',
-'<span class="greenGlowText">projects</span>       lists my projects\n',
-'<span class="greenGlowText">why?</span>           why did I make this page?\n',
-'<span class="greenGlowText">email</span>          don\'t spam me\n',
-'<span class="greenGlowText">secret</span>         utters the most guraded secrect in the universe\n',
-'<span class="greenGlowText">dark-joke</span>      fetches a dark joke from an api\n',
+'<span class="greenGlowText">socials</span>        Lists my social links\n',
+'<span class="greenGlowText">projects</span>       Lists my projects\n',
+'<span class="greenGlowText">why?</span>           Why did I make this page?\n',
+'<span class="greenGlowText">email</span>          Don\'t spam me\n',
+'<span class="greenGlowText">secret</span>         Utters the most guarded secrect in the universe\n',
+'<span class="greenGlowText">dark-joke</span>      Fetches a dark joke from an api\n',
 ]
 
 const whois = [
 '</br>',
 'you need to hire him right now.',
-"that's all you need to know now, for now.",
+"that's all you need to know, for now.",
+]
+
+const socials = [
+'</br>',
+'Instagram      ',
+'Twitter        ',
+'Linkedin        ',
+]
+
+const projects = [
+'</br>',
+'Projects coming soon',
+]
+
+const email = [
+'</br>',
+'kailashganeshyt@gmail.com',
 ]
 
 const notFound = [
