@@ -50,7 +50,8 @@ function runCommand(e){
             break;
             case "secret":
                 display(textArea.value)
-                printLineByLine(whois,terminalHistory)
+                printLineByLine(secret,terminalHistory)
+                setTimeout(() => {window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ") },600)
             break;
             case "dark-joke":
                 getJoke(textArea.value)
@@ -62,14 +63,16 @@ function runCommand(e){
     }
 }
 
-function printLineByLine(list,element,className,changeSpaces){
+function printLineByLine(list,element,className = "",changeSpaces){
     for(let i = 0; i < list.length; i++){
         let para = document.createElement("p");
         let newText = list[i]
         // if(changeSpaces){
         //     newText = list[i].replace(/ /g,'&nbsp;');
         // }
-        para.className = className;
+        if(className){
+            para.className = className;
+        }
         para.innerHTML += newText;
         element.append(para);
     }
@@ -113,7 +116,7 @@ async function getJoke(textAreaValue){
     const data = await response.json();
     console.log(data.joke)
     display(textAreaValue)
-    printLineByLine(["</br>",data.joke],terminalHistory)
+    printLineByLine(["</br>",data.joke],terminalHistory, "wrap")
 }
 
 printBanner();

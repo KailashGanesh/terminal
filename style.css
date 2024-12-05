@@ -73,3 +73,26 @@ body{
 .redText{
     color: var(--red);
 }
+
+.wrap{
+    white-space: wrap;
+}
+
+.link{
+    color: var(--cyan);
+    text-decoration: none;
+    padding: 2px;
+    line-height: 1.3;
+    transition: text-shadow 0.3s ease-in-out;
+}
+.link:hover{
+    text-shadow: var(--cyan) 0px 0px 15px;
+}
+
+.link::after{
+    content: "]";
+}
+
+.link::before{
+    content: "[";
+}

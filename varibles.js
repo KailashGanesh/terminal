@@ -43,9 +43,8 @@ const whois = [
 
 const socials = [
 '</br>',
-'Instagram      ',
-'Twitter        ',
-'Linkedin        ',
+'<a class="link" href="https://www.instagram.com/kailashganesh/" target="__black">Instagram</a>      ',
+'<a class="link" href="https://x.com/kailashganesh_" target="__black">Twitter</a>        ',
 ]
 
 const projects = [
@@ -55,9 +54,13 @@ const projects = [
 
 const email = [
 '</br>',
-'kailashganeshyt@gmail.com',
+'<a class="link" href="mailto:kailashganeshyt@gmail.com">kailashganeshyt@gmail.com</a>',
 ]
 
 const notFound = [
 "<span class=\"redText\">command not found.</span> For a list of available commands, type '<span class=\"greenGlowText\">help</span>'",
+]
+
+const secret = [
+    "Loading..."
 ]
